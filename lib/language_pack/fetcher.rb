@@ -31,6 +31,16 @@ module LanguagePack
 
     private
     def curl_command(command)
+      puts '---------------'
+      puts '---------------'
+      puts '---------------'
+      puts '---------------'
+      puts "curl_connect_timeout_in_seconds is #{curl_connect_timeout_in_seconds}"
+      puts "curl_timeout_in_seconds is #{curl_timeout_in_seconds}"
+      puts '---------------'
+      puts '---------------'
+      puts '---------------'
+      puts '---------------'
       "set -o pipefail; curl -L --fail --retry 5 --retry-delay 1 --connect-timeout #{curl_connect_timeout_in_seconds} --max-time #{curl_timeout_in_seconds} #{command}"
     end
 
